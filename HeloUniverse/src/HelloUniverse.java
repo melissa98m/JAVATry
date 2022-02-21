@@ -43,19 +43,24 @@ public class HelloUniverse {
         Neptune.matiere = "Gazeuse";
         Neptune.diameter = 49532;
         Neptune.revolution(-3543);
-
+/*
         System.out.printf("%s est une planete %s avec un diametre de %d" , jupiter.name, jupiter.matiere, jupiter.diameter);
-
         Planete Sedna = new Planete();
         System.out.printf("%s est une planete %s avec un diametre de %d" , Sedna.name, Sedna.matiere, Sedna.diameter);
-
         System.out.println("Neptune a effectué " + Neptune.revolution(-3442) + " tours autour de son étoile");
         System.out.println("Mars a effectué " + Mars.rotation(-684) + " tours sur elle même");
         System.out.println("Vénus a effectué " + Venus.rotation(1250) + " tours sur elle même");
-
         Mars.accueillirVaisseau(8);
         Mars.accueillirVaisseau("Fregate");
-
         System.out.println("Le nombre d'être humains a avoir sejournés sur Mars est de:" + Mars.totalVisiteur);
+        */
+           Atmosphere atmosphere = new Atmosphere();
+           atmosphere.TauxHydrogen = 83;
+           atmosphere.TauxHelium = 15;
+           atmosphere.TauxMethane= 2.5F;
+
+           Uranus.atmosphere = atmosphere;
+           System.out.println("L'atmosphere d'Uranus est composée: "+ "A " + Uranus.atmosphere.TauxHydrogen + " % d'hydrogéne " +
+                   "A " + Uranus.atmosphere.TauxHelium + "% d'Helium" + "A " + Uranus.atmosphere.TauxMethane + "% de méthane");
     }
 }
