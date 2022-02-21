@@ -71,6 +71,9 @@ public class HelloUniverse {
         Mars.accueillirVaisseau(croisseur);
 
         System.out.println("Le nombre d'être humains a avoir sejournés sur Mars est de:" + Mars.totalVisiteur);
+
+        System.out.println(" La forme d'une planète est : " + Planete.forme);
+        System.out.println("La forme de" + Mars.name + "est :" + Mars.forme);
     }
 
 }
