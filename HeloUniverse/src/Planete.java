@@ -1,15 +1,20 @@
 public class Planete {
+
+    static String forme= "Spherique";
+    static int nbPlanetesDecouvertes=0;
+
     String name;
     String matiere;
     long diameter;
     int totalVisiteur;
     Atmosphere atmosphere;
     Vaisseau vaisseauAccoster;
-    static String forme= "Spherique";
-    static int nbPlanetesDecouvertes=0;
 
-    Planete(){
-               nbPlanetesDecouvertes++;
+
+     Planete(String name){
+         this.name = name;
+         nbPlanetesDecouvertes++;
+
      }
 
 
