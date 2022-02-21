@@ -2,11 +2,28 @@ public class Planete {
     String name;
     String matiere;
     long diameter;
+    int totalVisiteur;
 
-    void rotation(){
-        System.out.println("Je suis la planète " + name + " et je tourne sur moi-même.");
+    int rotation(int angle){
+        return angle/360;
     }
-    void revolution(){
-        System.out.println("Je suis la planète " + name + " et je tourne autour de mon étoile.");
+
+    int revolution(int angle){
+        return angle/360;
+    }
+
+    void accueillirVaisseau(int newHuman) {
+        totalVisiteur = totalVisiteur + newHuman;
+    }
+
+    void accueillirVaisseau(String type) {
+        if(type.equals("Chasseur")) {
+            totalVisiteur = totalVisiteur + 3;
+        } else if (type.equals("Fregate")) {
+            totalVisiteur = totalVisiteur + 12;
+        } else if (type.equals("Croisseur")) {
+            totalVisiteur = totalVisiteur + 50;
+        }
+
     }
 }
