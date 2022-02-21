@@ -74,6 +74,9 @@ public class HelloUniverse {
 
         System.out.println(" La forme d'une planète est : " + Planete.forme);
         System.out.println("La forme de" + Mars.name + "est :" + Mars.forme);
+
+        System.out.println(Planete.expension(10.5));
+        System.out.println(Planete.expension(14.5));
     }
 
 }
