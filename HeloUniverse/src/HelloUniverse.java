@@ -77,6 +77,7 @@ public class HelloUniverse {
 
         System.out.println(Planete.expension(10.5));
         System.out.println(Planete.expension(14.5));
+        System.out.println(Planete.nbPlanetesDecouvertes);
     }
 
 }
