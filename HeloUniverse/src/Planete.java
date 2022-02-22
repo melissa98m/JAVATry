@@ -1,7 +1,7 @@
 public class Planete {
 
-    static String forme= "Spherique";
-    static int nbPlanetesDecouvertes=0;
+    static String forme = "Spherique";
+    static int nbPlanetesDecouvertes = 0;
 
     String name;
     String matiere;
@@ -11,12 +11,11 @@ public class Planete {
     Vaisseau vaisseauAccoster;
 
 
-     Planete(String name){
-         this.name = name;
-         nbPlanetesDecouvertes++;
+    Planete(String name) {
+        this.name = name;
+        nbPlanetesDecouvertes++;
 
-     }
-
+    }
 
     int rotation(int angle) {
         return angle / 360;

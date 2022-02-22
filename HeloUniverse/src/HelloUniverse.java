@@ -1,7 +1,7 @@
 public class HelloUniverse {
     public static void main(String... args) {
 
-        Planete jupiter = new Planete( "Jupiter");
+        Planete jupiter = new Planete("Jupiter");
         jupiter.matiere = "Gazeuse";
         jupiter.diameter = 142984;
 
@@ -70,6 +70,25 @@ public class HelloUniverse {
         System.out.println(Planete.expension(10.5));
         System.out.println(Planete.expension(14.5));
         System.out.println(Planete.nbPlanetesDecouvertes);
+
+
+        VaisseauDeGuerre chasseur = new VaisseauDeGuerre();
+        chasseur.type = "Chasseur";
+        chasseur.blindage = 156;
+        chasseur.resistanceDuBouclier=2;
+        chasseur.activerBouclier();
+
+        VaisseauCivil vaisseauMonde = new VaisseauCivil();
+        vaisseauMonde.type = "Vaisseau-Monde";
+        vaisseauMonde.blindage= 4784;
+        vaisseauMonde.resistanceDuBouclier=30;
+        vaisseauMonde.activerBouclier();
+
+        chasseur.attaquer(vaisseauMonde,"lasers photoniques" , 30 );
+
+        vaisseauMonde.desactiverBouclier();
+        System.out.println("Resistance du boublier du VM est " + vaisseauMonde.resistanceDuBouclier);
+        System.out.println("Le blindage du VM est "+ vaisseauMonde.blindage);
     }
 
 }
