@@ -57,25 +57,26 @@ public class HelloUniverse {
         System.out.println(Planete.nbPlanetesDecouvertes);
 
 
-        VaisseauDeGuerre chasseur = new VaisseauDeGuerre();
+        Vaisseau chasseur = new VaisseauDeGuerre();  //polymorphysme
         chasseur.type = "Chasseur";
         chasseur.blindage = 156;
         chasseur.resistanceDuBouclier=2;
-        chasseur.activerBouclier();
 
-        VaisseauCivil vaisseauMonde = new VaisseauCivil();
+
+        Vaisseau vaisseauMonde = new VaisseauCivil();
         vaisseauMonde.type = "Vaisseau-Monde";
         vaisseauMonde.blindage= 4784;
         vaisseauMonde.resistanceDuBouclier=30;
         vaisseauMonde.activerBouclier();
+
+        chasseur.activerBouclier();
+        ((VaisseauDeGuerre) chasseur).attaquer(vaisseauMonde,"lasers photoniques" , 30 );
 
         //exemple de transtypage
         Vaisseau pirate = new VaisseauDeGuerre();
         pirate.type = "Croiser";
         ((VaisseauDeGuerre)pirate).attaquer(chasseur , "Lasers violet" , 5);
 
-
-        chasseur.attaquer(vaisseauMonde,"lasers photoniques" , 30 );
 
         vaisseauMonde.desactiverBouclier();
         System.out.println("Resistance du boublier du VM est " + vaisseauMonde.resistanceDuBouclier);
