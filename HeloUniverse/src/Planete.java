@@ -4,7 +4,7 @@ public class Planete {
     static int nbPlanetesDecouvertes = 0;
 
     String name;
-    String matiere;
+
     long diameter;
     int totalVisiteur;
     Atmosphere atmosphere;
@@ -25,17 +25,6 @@ public class Planete {
         return angle / 360;
     }
 
-    Vaisseau accueillirVaisseau(Vaisseau vaisseau) {
-        totalVisiteur = totalVisiteur + vaisseau.nbPassager;
-        if (vaisseauAccoster == null) {
-            System.out.println("Aucun vaisseau ne s'en va");
-        } else {
-            System.out.println("un vaisseau de type " + vaisseauAccoster.type + " doit partir");
-        }
-        Vaisseau vaisseauPrecedent = vaisseauAccoster;
-        vaisseauAccoster = vaisseau;
-        return vaisseauPrecedent;
-    }
 
     static String expension(double distance) {
         if (distance < 14) {
