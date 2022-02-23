@@ -7,14 +7,18 @@ public class PlaneteTellurique extends  Planete implements Habitable{
     }
 
     public Vaisseau accueillirVaisseau(Vaisseau newVaisseau) {
-        totalVisiteur = totalVisiteur + newVaisseau.nbPassager;
-        if (vaisseauAccoster == null) {
-            System.out.println("Aucun vaisseau ne s'en va");
-        } else {
-            System.out.println("un vaisseau de type " + vaisseauAccoster.type + " doit partir");
+        if (newVaisseau instanceof VaisseauDeGuerre) {
+            ((VaisseauDeGuerre) newVaisseau).desactiverArme();
         }
-        Vaisseau vaisseauPrecedent = vaisseauAccoster;
-        vaisseauAccoster = newVaisseau;
-        return vaisseauPrecedent;
-    }
+            totalVisiteur = totalVisiteur + newVaisseau.nbPassager;
+            if (vaisseauAccoster == null) {
+                System.out.println("Aucun vaisseau ne s'en va");
+            } else {
+                System.out.println("un vaisseau de type " + vaisseauAccoster.type + " doit partir");
+            }
+            Vaisseau vaisseauPrecedent = vaisseauAccoster;
+            vaisseauAccoster = newVaisseau;
+            return vaisseauPrecedent;
+        }
+
 }
