@@ -1,5 +1,3 @@
-import static java.lang.System.out;
-
 public class HelloUniverse {
     public static void main(String... args) {
 
@@ -24,12 +22,12 @@ public class HelloUniverse {
         Neptune.diameter = 49532;
         Neptune.revolution(-3543);
 
-        out.printf("%s est une planete  avec un diametre de %d", jupiter.name,jupiter.diameter);
+        System.out.printf("%s est une planete  avec un diametre de %d", jupiter.name,jupiter.diameter);
         PlaneteTellurique Sedna = new PlaneteTellurique("Sedna");
-        out.printf("%s est une planete  avec un diametre de %d", Sedna.name,Sedna.diameter);
-        out.println("Neptune a effectué " + Neptune.revolution(-3442) + " tours autour de son étoile");
-        out.println("Mars a effectué " + Mars.rotation(-684) + " tours sur elle même");
-        out.println("Vénus a effectué " + Venus.rotation(1250) + " tours sur elle même");
+        System.out.printf("%s est une planete  avec un diametre de %d", Sedna.name,Sedna.diameter);
+        System.out.println("Neptune a effectué " + Neptune.revolution(-3442) + " tours autour de son étoile");
+        System.out.println("Mars a effectué " + Mars.rotation(-684) + " tours sur elle même");
+        System.out.println("Vénus a effectué " + Venus.rotation(1250) + " tours sur elle même");
 
 
         Atmosphere atmosphere = new Atmosphere();
@@ -37,7 +35,7 @@ public class HelloUniverse {
         atmosphere.TauxHelium = 15F;
         atmosphere.TauxMethane = 2.5F;
         Uranus.atmosphere = atmosphere;
-        out.println("L'atmosphere d'Uranus est composée: " + "A " + Uranus.atmosphere.TauxHydrogen + " % d'hydrogéne " +
+        System.out.println("L'atmosphere d'Uranus est composée: " + "A " + Uranus.atmosphere.TauxHydrogen + " % d'hydrogéne " +
                 "A " + Uranus.atmosphere.TauxHelium + "% d'Helium" + "A " + Uranus.atmosphere.TauxMethane + "% de méthane");
 
         VaisseauDeGuerre newVaisseau = new VaisseauDeGuerre("Fregate");
@@ -51,12 +49,12 @@ public class HelloUniverse {
         //Mars.accueillirVaisseau(croisseur);
 
 
-        out.println(" La forme d'une planète est : " + Planete.forme);
-        out.println("La forme de" + Mars.name + "est :" + Mars.forme);
+        System.out.println(" La forme d'une planète est : " + Planete.forme);
+        System.out.println("La forme de" + Mars.name + "est :" + Mars.forme);
 
-        out.println(Planete.expension(10.5));
-        out.println(Planete.expension(14.5));
-        out.println(Planete.nbPlanetesDecouvertes);
+        System.out.println(Planete.expension(10.5));
+        System.out.println(Planete.expension(14.5));
+        System.out.println(Planete.nbPlanetesDecouvertes);
 
 
         Vaisseau chasseur = new VaisseauDeGuerre("Chasseur");  //polymorphysme
@@ -80,16 +78,15 @@ public class HelloUniverse {
 
 
         vaisseauMonde.desactiverBouclier();
-        out.println("Resistance du boublier du VM est " + vaisseauMonde.resistanceDuBouclier);
-        out.println("Le blindage du VM est "+ vaisseauMonde.blindage);
+        System.out.println("Resistance du boublier du VM est " + vaisseauMonde.resistanceDuBouclier);
+        System.out.println("Le blindage du VM est "+ vaisseauMonde.blindage);
         Mars.accueillirVaisseau(vaisseauMonde);
        Mars.accueillirVaisseau(chasseur);
 
 
        VaisseauDeGuerre newChasseur = new VaisseauDeGuerre("Chasseur");
        Terre.accueillirVaisseau(newChasseur);
-       System.out.println("Le chasseur a réjetté" + newChasseur.emporterCargaison(20)
-        + "tonnes");
+       System.out.println("Le chasseur a refusée"+ newChasseur.emporterCargaison(20) +" tonnes");
     }
 
 }
